@@ -1,3 +1,5 @@
+name: GitHub Actions Manual
+run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 on:
   workflow_dispatch:
     inputs:
