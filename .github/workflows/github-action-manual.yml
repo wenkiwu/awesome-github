@@ -1,5 +1,5 @@
 name: GitHub Actions Manual
-run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+run-name: ${{ github.actor }} is testing out GitHub Actions 🚩 
 on:
   workflow_dispatch:
     inputs:
@@ -31,4 +31,8 @@ jobs:
     if:  ${{ inputs.print_tags }} 
     steps:
       - name: Print the input tag to STDOUT
-        run: echo  The tags are ${{ inputs.tags }}
+        run: |
+         echo  The tags are ${{ inputs.tags }}
+         echo "this is summary 🥇" >> $GITHUB_STEP_SUMMARY
+         echo "this is second summary 🥈" >> $GITHUB_STEP_SUMMARY
+        
